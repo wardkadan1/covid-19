@@ -1,5 +1,3 @@
-
-
 # login file -ali abo abead
 from tkinter import *
 import tkinter.messagebox
@@ -20,7 +18,6 @@ def new_win():
     root = Tk()
     root.geometry("250x300")
     root.title('Login Page')
-    
 
     def ValidateLogin():
         with sqlite3.connect('Form.db') as db:
@@ -36,9 +33,6 @@ def new_win():
 
         else:
             print('not found')
-          
-
-
             print(entry_2.get() + " , " + entry_4.get())
             tkinter.messagebox.showinfo("Error", 'Error')
 
@@ -78,9 +72,6 @@ window = Tk()
 fn = StringVar()
 Email = StringVar()
 Password = StringVar()
-
-
-
 Phone = StringVar()
 rad_var1 = StringVar()
 window.title("Registration Form")
@@ -94,7 +85,6 @@ sub_menu2 = Menu(menu)
 
 menu.add_cascade(label="File", menu=sub_menu1)
 sub_menu1.add_command(label="Exit", command=exit1)
-
 
 label1 = Label(window, text="Registration Form", relief="solid", font=("Edwardian Script ITC", 20, "bold")).pack()
 
@@ -112,8 +102,6 @@ entry2.place(x=200, y=254)
 
 label4 = Label(window, text="Password", font=("arial", 15))
 label4.place(x=80, y=280)
-
-
 
 entry3 = Entry(window, textvar=Password, show='*')
 entry3.place(x=200, y=284)
@@ -135,8 +123,5 @@ b2 = Button(window, text="Quit", bg="red", fg="Black", relief=GROOVE, height=3, 
 b2.place(x=20, y=450)
 b3 = Button(window, text="Login", bg="green", fg="Black", relief=GROOVE, height=3, width=10, command=new_win)
 b3.place(x=200, y=450)
-
-
-
 
 window.mainloop()
